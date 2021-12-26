@@ -1,5 +1,5 @@
-import './style.css';
-import url from './images/logo.png';
+import '../style.css';
+// import url from '../images/logo.png';
 import shows from './shows.js';
 import showsView from './showsView.js';
 import likes from './likes.js';
@@ -24,6 +24,6 @@ const displayAmountOfShows = async () => {
 window.onload = () => {
   displayShows();
   displayAmountOfShows();
-  document.querySelector('.logo-img').src = url;
-  document.querySelector('.footer-logo-img').src = url;
+  // document.querySelector('.logo-img').src = url;
+  // document.querySelector('.footer-logo-img').src = url;
 };
