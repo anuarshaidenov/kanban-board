@@ -19,7 +19,7 @@ For this project we used TV Maze API for listing the shows and Involvement API t
 
 ## Live Demo
 
-[Live Demo Link](https://patriciachrysy.github.io/kanban-board/dist/)
+[Live Demo Link](https://anuarshaidenov.github.io/kanban-board/dist/)
 
 
 ## Getting Started
@@ -43,7 +43,7 @@ Run the following commands as listed in your terminal:
 
 - GitHub: [@githubhandle](https://github.compatriciachrysy)
   
-👤 **Annuar**
+👤 **Anuar**
 
 - GitHub: [@anuarshaidenov](https://github.com/anuarshaidenov)
 
