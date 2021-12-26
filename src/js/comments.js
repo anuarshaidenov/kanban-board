@@ -1,11 +1,14 @@
 /* eslint-disable no-await-in-loop */
 
-const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
+const baseURL =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
 
 const appID = '8a0dfW0tu0UAP5mKoeUq';
 
 export const fetchComments = async (showId) => {
-  const response = await fetch(`${baseURL}/${appID}/comments?item_id=${showId}`);
+  const response = await fetch(
+    `${baseURL}/${appID}/comments?item_id=${showId}`
+  );
   const data = response.ok ? await response.json() : [];
   return data;
 };
@@ -36,8 +39,6 @@ export const updateShowWithComments = async (shows) => {
   return shows;
 };
 
-export const countComments = (show) => show.comments.length;
-
 const displayComment = (comment) => {
   const commentDiv = document.createElement('div');
   commentDiv.classList.add('comment');
@@ -66,12 +67,6 @@ export const buildCommentSection = (show) => {
 
   const title = document.createElement('h1');
   title.innerText = 'Comments';
-
-  const spanCount = document.createElement('small');
-  spanCount.setAttribute('id', `comment-count-${show.id}`);
-  spanCount.innerText = `(${countComments(show)})`;
-
-  title.appendChild(spanCount);
 
   formSection.appendChild(title);
 
@@ -111,7 +106,9 @@ export const buildCommentSection = (show) => {
         form.parentNode.insertBefore(displayComment(newComment), form);
         show.comments = allComments;
 
-        const showCommentCount = document.querySelector(`#comment-count-${show.id}`);
+        const showCommentCount = document.querySelector(
+          `#comment-count-${show.id}`
+        );
         showCommentCount.innerText = `(${countComments(show)})`;
       }
     }
@@ -134,11 +131,6 @@ export const buildCommentSection = (show) => {
   form.appendChild(nameInput);
   form.appendChild(textarea);
   form.appendChild(div);
-
-  show.comments.map((comment) => {
-    formSection.appendChild(displayComment(comment));
-    return 0;
-  });
 
   formSection.appendChild(form);
 

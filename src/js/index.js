@@ -10,7 +10,6 @@ const displayShows = async () => {
   showsView.renderLoadingMessage();
   const allLikes = await likes.fetchLikes();
   let showsList = await shows.fetchShows();
-  showsList = await updateShowWithComments(showsList);
   showsView.displayShows(showsList, allLikes);
 };
 
