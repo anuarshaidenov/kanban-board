@@ -19,7 +19,7 @@ For this project we used TV Maze API for listing the shows and Involvement API t
 
 ## Live Demo
 
-[Live Demo Link](https://anuarshaidenov.github.io/kanban-board/dist/)
+[Live Demo Link](https://anuarshaidenov.github.io/tv-shows-database/dist/)
 
 
 ## Getting Started
